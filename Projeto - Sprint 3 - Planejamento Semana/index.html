@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planejamento Semanal | Sprint 3</title>
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header__container">
+            <h1 class="container__title">Planejamento Semanal</h1>
+            <p class="container__description">Utilize o formulário para adicionar novas tarefas</p>
+        </div>
+
+        <button class="btn__save-add">Salvar localStorage</button>
+        <button class="btn__delete">Excluir localStorage</button>
+
+        <div class="header__hour-date">
+            <span class="header__hour">hora</span>
+            <span class="header__date">data completa (28 de setembro de 2022)</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="section__add-event">
+            <fieldset class="fieldset">
+                <input class="input__info event-description" type="text" aria-label="Activity" aria-description="Description of event">
+                <input class="input__info day-week" aria-label="Day" aria-description="Day of the week">
+                <input class="input__info hour" aria-label="Hour" aria-description="hour of the event" >
+            </fieldset>
+            <button class="btn__save-add">Adicionar Atividade</button>
+            <button class="btn__delete">Excluir Todos</button>
+        </section>
+
+        <section class="toDoList">
+            <nav class="menu">
+                <ul class="menu-list">
+                    <li class="menu-list__days"><button>Segunda-Feira</button></li>
+                    <li class="menu-list__days"><button>Terça-Feira</button></li>
+                    <li class="menu-list__days"><button>Quarta-Feira</button></li>
+                    <li class="menu-list__days"><button>Quinta-Feira</button></li>
+                    <li class="menu-list__days"><button>Sexta-Feira</button></li>
+                    <li class="menu-list__days"><button>Sábado</button></li>
+                    <li class="menu-list__days"><button>Domingo</button></li>
+                </ul>
+            </nav>
+            <div class="toDoList-board">
+                <div class="toDoList_card">
+                    <div class="card__hour">11h00m</div>
+                    <div class="card__content">
+                        <span class="card__content-activity"></span>
+                        <button class="card__content_btn-erase">Apagar</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+
+
+</body>
+</html>
