@@ -1,0 +1,11 @@
+@import '../base';
+@import '../mixins';
+@import '../variables';
+
+.section__add-event {
+    height: 3rem;
+    .input__info {
+        @include btnStyle(30rem, 3rem, $white);
+        border: .0625rem solid $leaf-green;
+    }
+}

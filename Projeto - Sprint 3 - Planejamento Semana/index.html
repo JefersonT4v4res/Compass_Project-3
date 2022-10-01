@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Planejamento Semanal | Sprint 3</title>
 </head>
 <body>
@@ -14,12 +16,14 @@
             <p class="container__description">Utilize o formulário para adicionar novas tarefas</p>
         </div>
 
-        <button class="btn__save-add">Salvar localStorage</button>
-        <button class="btn__delete">Excluir localStorage</button>
+        <div class="header__container-Flex save-delete">
+            <button class="btn__style save">Salvar localStorage</button>
+            <button class="btn__style delete-localStorage">Excluir localStorage</button>
+        </div>
 
-        <div class="header__hour-date">
+        <div class="header__container-Flex hour-date">
             <span class="header__hour">hora</span>
-            <span class="header__date">data completa (28 de setembro de 2022)</span>
+            <span class="header__date">28 de setembro de 2022</span>
         </div>
     </header>
 
@@ -28,8 +32,8 @@
                 <input class="input__info event-description" type="text" aria-label="Activity" aria-description="Description of event">
                 <input class="input__info day-week" aria-label="Day" aria-description="Day of the week">
                 <input class="input__info hour" aria-label="Hour" aria-description="hour of the event" >
-            <button class="btn__save-add">Adicionar Atividade</button>
-            <button class="btn__delete">Excluir Todos</button>
+            <button class="btn__style add">Adicionar Atividade</button>
+            <button class="btn__style delete-all">Excluir Todos</button>
         </section>
 
         <section class="toDoList">

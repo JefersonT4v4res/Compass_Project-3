@@ -1,0 +1,21 @@
+@import './base';
+@import './variables';
+
+@mixin styleText($font, $fontSize, $colorFont) {
+    font-family: $font;
+    font-size: $fontSize;
+    color: $colorFont;
+}
+
+@mixin flexContainer {
+    display: flex;
+    align-items: center;
+}
+
+@mixin btnStyle($width, $heigth, $colorBtn) {
+    width: $width;
+    height: $heigth;
+    border-radius: .625rem;
+    background-color: $colorBtn;
+}
+
