@@ -3,9 +3,156 @@
 @import '../variables';
 
 .section__add-event {
-    height: 3rem;
+    height: 7rem;
+    width: calc(100vw - 10rem);
+    @include flexContainer();
+    justify-content: space-around;
+    margin: 0 auto;
     .input__info {
         @include btnStyle(30rem, 3rem, $white);
+        @include flexContainer();
         border: .0625rem solid $leaf-green;
+        box-sizing: border-box;
+        position: relative;
+        padding: .0625rem 0 0 1rem;
+        z-index: 17;
+        .btn__active-dropdown {
+            cursor: pointer;
+        }
+        .container-day {
+            margin-left: 1rem;
+        }
+        .input__hour {
+            width: 4.2rem;
+            &:focus {
+                border: 0 none;
+                outline: 0;
+            }
+        }
     }
+    .event-description {
+        padding: .0625rem 0 0 3rem;
+        @include styleText($Nunito, $Complete-Text, $light-gray);
+    }
+    .event__placeholder {
+        position: absolute;
+        left: 11rem;
+        top: 11.2rem;
+        z-index: 26;
+        pointer-events: none;
+        transition: all 0.3s ease;
+        @include styleText($Nunito, $Complete-Text, $light-gray);
+    }
+    .container__event-description :is(input:focus, input:valid)~label {
+        transform: translateY(-1.8rem) scale(1);
+        padding: 3px;
+        font-size: .9375rem;
+        background-color: $white;
+    }
+    .container__dropdown {
+        height: 3rem;
+        .chosen-day, .hour {
+            @include styleText($Nunito, $Complete-Text, $light-gray);
+        }
+        .day-week {
+            width: 13.125rem;
+            @include flexContainer();
+            justify-content: flex-start;
+            .container-hour {
+                margin-left: 1em;
+            }
+            .container-hour {
+                margin-left: 0em;
+            }
+        }
+        .hour {
+            width: 6.775rem;
+        }
+        .dropdown__menu {
+            list-style: none;
+            width: calc(210px - 2rem);
+            display: none;
+            flex-direction: column;
+            align-items: stretch;
+            text-align: center;
+            position: relative;
+            left: 0;
+            overflow: auto;
+            background: $snow;
+            overflow: auto;
+            padding-top: 12px;
+            z-index: 5;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 1.5rem 2rem 0.011rem #5c5c5c57;
+            .option-day, .option-hour {
+                @include styleText($Nunito, 15px, $light-gray);
+                cursor: pointer;
+            }
+            .dropdown__menu-divider {
+                width: 6rem;
+                margin: 0.4rem auto;
+            }
+        }
+        .days-options {
+            bottom: 0.5rem;
+            height: 15rem;
+            width: 13rem;
+            &::-webkit-scrollbar {
+                width: 0px;
+            }
+        }
+        .hours-options {
+            height: 10rem;
+            width: 6.5rem;
+            left: 0.1rem;
+            bottom: 7px;
+            &::-webkit-scrollbar {
+                width: 5px;
+                scroll-behavior: smooth;
+            }
+            &::-webkit-scrollbar-track {
+                padding-top: 3rem;
+                border-radius: 10px;
+                background-color: $black;
+            }
+            &::-webkit-scrollbar-thumb {
+                border: 1px solid $light-gray;
+                background-color: $white;
+                border-radius: 10px;
+            }
+        }
+        .active {
+            display: flex;
+            animation: open__dropdown .6s ease-out 0s 1 normal forwards;
+        }
+        @keyframes open__dropdown {
+            0% {
+                opacity: 0;
+                height: 0;
+            }
+        
+            100% {
+                opacity: 1;
+                height: 15rem;
+            }
+        }
+    }
+    .btn__style {
+        @include styleText($Nunito, $Secondary-title, $white);
+        cursor: pointer;
+    }
+    .add {
+        @include btnStyle(222px, 40px, $leaf-green);
+        @include flexContainer();
+        justify-content: center
+    }
+    .delete-all {
+        @include btnStyle(184px, 40px, $smooth-red);
+        @include flexContainer();
+        justify-content: center
+    }
+   .btn__icon-img {
+    margin-right: 0.5rem;
+   }
+
 }

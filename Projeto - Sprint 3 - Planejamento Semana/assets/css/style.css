@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap");
 .header {
   display: flex;
   height: 8.1875rem;
@@ -71,12 +72,189 @@
 }
 
 .section__add-event {
-  height: 3rem;
+  height: 7rem;
+  width: calc(100vw - 10rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
 }
 .section__add-event .input__info {
   width: 30rem;
   height: 3rem;
   border-radius: 0.625rem;
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
   border: 0.0625rem solid #2CBE82;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.0625rem 0 0 1rem;
+  z-index: 17;
+}
+.section__add-event .input__info .btn__active-dropdown {
+  cursor: pointer;
+}
+.section__add-event .input__info .container-day {
+  margin-left: 1rem;
+}
+.section__add-event .input__info .input__hour {
+  width: 4.2rem;
+}
+.section__add-event .input__info .input__hour:focus {
+  border: 0 none;
+  outline: 0;
+}
+.section__add-event .event-description {
+  padding: 0.0625rem 0 0 3rem;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.875rem;
+  color: #3B3E45;
+}
+.section__add-event .event__placeholder {
+  position: absolute;
+  left: 11rem;
+  top: 11.2rem;
+  z-index: 26;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.875rem;
+  color: #3B3E45;
+}
+.section__add-event .container__event-description :is(input:focus, input:valid) ~ label {
+  transform: translateY(-1.8rem) scale(1);
+  padding: 3px;
+  font-size: 0.9375rem;
+  background-color: #ffffff;
+}
+.section__add-event .container__dropdown {
+  height: 3rem;
+}
+.section__add-event .container__dropdown .chosen-day, .section__add-event .container__dropdown .hour {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.875rem;
+  color: #3B3E45;
+}
+.section__add-event .container__dropdown .day-week {
+  width: 13.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.section__add-event .container__dropdown .day-week .container-hour {
+  margin-left: 1em;
+}
+.section__add-event .container__dropdown .day-week .container-hour {
+  margin-left: 0em;
+}
+.section__add-event .container__dropdown .hour {
+  width: 6.775rem;
+}
+.section__add-event .container__dropdown .dropdown__menu {
+  list-style: none;
+  width: calc(210px - 2rem);
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: center;
+  position: relative;
+  left: 0;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.968627451);
+  overflow: auto;
+  padding-top: 12px;
+  z-index: 5;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 1.5rem 2rem 0.011rem rgba(92, 92, 92, 0.3411764706);
+}
+.section__add-event .container__dropdown .dropdown__menu .option-day, .section__add-event .container__dropdown .dropdown__menu .option-hour {
+  font-family: "Nunito", sans-serif;
+  font-size: 15px;
+  color: #3B3E45;
+  cursor: pointer;
+}
+.section__add-event .container__dropdown .dropdown__menu .dropdown__menu-divider {
+  width: 6rem;
+  margin: 0.4rem auto;
+}
+.section__add-event .container__dropdown .days-options {
+  bottom: 0.5rem;
+  height: 15rem;
+  width: 13rem;
+}
+.section__add-event .container__dropdown .days-options::-webkit-scrollbar {
+  width: 0px;
+}
+.section__add-event .container__dropdown .hours-options {
+  height: 10rem;
+  width: 6.5rem;
+  left: 0.1rem;
+  bottom: 7px;
+}
+.section__add-event .container__dropdown .hours-options::-webkit-scrollbar {
+  width: 5px;
+  scroll-behavior: smooth;
+}
+.section__add-event .container__dropdown .hours-options::-webkit-scrollbar-track {
+  padding-top: 3rem;
+  border-radius: 10px;
+  background-color: #000000;
+}
+.section__add-event .container__dropdown .hours-options::-webkit-scrollbar-thumb {
+  border: 1px solid #3B3E45;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+.section__add-event .container__dropdown .active {
+  display: flex;
+  -webkit-animation: open__dropdown 0.6s ease-out 0s 1 normal forwards;
+          animation: open__dropdown 0.6s ease-out 0s 1 normal forwards;
+}
+@-webkit-keyframes open__dropdown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 15rem;
+  }
+}
+@keyframes open__dropdown {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 15rem;
+  }
+}
+.section__add-event .btn__style {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.0625rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+.section__add-event .add {
+  width: 222px;
+  height: 40px;
+  border-radius: 0.625rem;
+  background-color: #2CBE82;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section__add-event .delete-all {
+  width: 184px;
+  height: 40px;
+  border-radius: 0.625rem;
+  background-color: #DA2B40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section__add-event .btn__icon-img {
+  margin-right: 0.5rem;
 }/*# sourceMappingURL=style.css.map */

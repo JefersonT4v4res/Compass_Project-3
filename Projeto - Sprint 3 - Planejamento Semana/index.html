@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Planejamento Semanal | Sprint 3</title>
+    <script src="./assets/js/svg-inject.min.js"></script>
+
+    <script>
+
+    </script>
 </head>
-<body>
+<body onload="clock(), currentDate()">
     
     <header class="header">
         <div class="header__container">
@@ -22,18 +27,146 @@
         </div>
 
         <div class="header__container-Flex hour-date">
-            <span class="header__hour">hora</span>
-            <span class="header__date">28 de setembro de 2022</span>
+            <span class="header__hour"></span>
+            <span class="header__date"></span>
         </div>
     </header>
 
     <main>
         <section class="section__add-event">
-                <input class="input__info event-description" type="text" aria-label="Activity" aria-description="Description of event">
-                <input class="input__info day-week" aria-label="Day" aria-description="Day of the week">
-                <input class="input__info hour" aria-label="Hour" aria-description="hour of the event" >
-            <button class="btn__style add">Adicionar Atividade</button>
-            <button class="btn__style delete-all">Excluir Todos</button>
+            <div class="container__event-description">
+                <input class="input__info event-description" required="" id="event" type="text" aria-label="Activity" aria-description="Description of event">
+                <label class="event__placeholder" for="event">Atividade</label>
+            </div>
+                
+                <div class="container__dropdown days">
+                    <div class="input__info day-week" type="text" placeholder="Dia da Semana" aria-label="Day" aria-description="Day of the week">
+                        <span class="chosen-day">Segunda-Feira</span>
+                        <img class="btn__active-dropdown container-day" id="btn__active" src="./assets/icons/dropdown-icon.svg" alt="seta cinza apontando para baixo" onload="SVGInject(this)">
+                    </div>
+                    <ul class="dropdown__menu days-options">
+                        <li><span class="option-day" onclick="pickDay(this)" id="monday">Segunda-Feira</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-day" onclick="pickDay(this)" id="tuesday">Terça-Feira</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-day" onclick="pickDay(this)" id="wednesday">Quarta-Feira</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-day" onclick="pickDay(this)" id="thursday">Quinta-Feira</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-day" onclick="pickDay(this)" id="friday">Sexta-Feira</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-day" onclick="pickDay(this)" id="saturday">Sábado</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-day" onclick="pickDay(this)" id="sunday">Domingo</span></li>
+                    </ul>
+                </div>
+
+                <div class="container__dropdown hours">
+                    <div class="input__info hour" type="text" placeholder="Dia da Semana" aria-label="Day" aria-description="Day of the week">
+                        <input class="input__hour" type="text" placeholder="12h00m" aria-label="Hour" aria-description="hour of the event" >
+                        <img class="btn__active-dropdown container-hour" src="./assets/icons/dropdown-icon.svg" alt="seta cinza apontando para baixo" onload="SVGInject(this)">
+                    </div>
+                    <ul class="dropdown__menu hours-options" >
+                        <li><span class="option-hour" onclick="pickHour(this)">00h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">00h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">01h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">01h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">02h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">02h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">03h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">03h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">04h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">04h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">05h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">05h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">06h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">06h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">07h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">07h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">08h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">08h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">09h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">09h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">10h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">10h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">11h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">11h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">12h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">12h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">13h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">13h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">14h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">14h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">15h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">15h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">16h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">16h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">17h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">17h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">18h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">18h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">19h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">19h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">20h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">20h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">21h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">21h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">22h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">22h30m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">23h00m</span></li>
+                        <li><hr class="dropdown__menu-divider"></li>
+                        <li><span class="option-hour" onclick="pickHour(this)">23h30m</span></li>
+                    </ul>
+                </div>
+               
+            <button class="btn__style add"> <img class="btn__icon-img Plus" src="./assets/icons/Plus-icon.svg" alt="Icone de soma"> Adicionar Atividade</button>
+            <button class="btn__style delete-all"> <img class="btn__icon-img Difference" src="./assets/icons/Difference-icon.svg" alt="Icone de diferença"> Excluir Todos</button>
         </section>
 
         <section class="toDoList">
@@ -61,7 +194,7 @@
         </section>
     </main>
 
-
-
+    <script src="./assets/js/clock.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
