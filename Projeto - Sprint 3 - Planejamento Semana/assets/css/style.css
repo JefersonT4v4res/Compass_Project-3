@@ -4,6 +4,68 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap");
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../imgs/LogoCompasso.svg);
+  background-repeat: no-repeat;
+  background-position: 64rem 19rem;
+  background-size: 43rem;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../imgs/LogoCompasso.svg);
+  background-repeat: no-repeat;
+  background-position: 64rem 19rem;
+  background-size: 43rem;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../imgs/LogoCompasso.svg);
+  background-repeat: no-repeat;
+  background-position: 64rem 19rem;
+  background-size: 43rem;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../imgs/LogoCompasso.svg);
+  background-repeat: no-repeat;
+  background-position: 64rem 19rem;
+  background-size: 43rem;
+}
+
 .header {
   display: flex;
   height: 8.1875rem;
@@ -69,6 +131,36 @@
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
   color: #3B3E45;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../imgs/LogoCompasso.svg);
+  background-repeat: no-repeat;
+  background-position: 64rem 19rem;
+  background-size: 43rem;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../imgs/LogoCompasso.svg);
+  background-repeat: no-repeat;
+  background-position: 64rem 19rem;
+  background-size: 43rem;
 }
 
 .section__add-event {
@@ -257,4 +349,105 @@
 }
 .section__add-event .btn__icon-img {
   margin-right: 0.5rem;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../imgs/LogoCompasso.svg);
+  background-repeat: no-repeat;
+  background-position: 64rem 19rem;
+  background-size: 43rem;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(../imgs/LogoCompasso.svg);
+  background-repeat: no-repeat;
+  background-position: 64rem 19rem;
+  background-size: 43rem;
+}
+
+.toDoList {
+  display: block;
+}
+.toDoList .menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100vw - 4rem);
+  margin: 0 auto 5rem;
+}
+.toDoList .menu .block__time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 2rem;
+  top: 15rem;
+  width: 85px;
+  height: 75px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 10px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.0625rem;
+  color: #3B3E45;
+}
+.toDoList .menu .menu-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: calc(100vw - 15rem);
+}
+.toDoList .menu .menu-list .bnt__days {
+  width: 150px;
+  height: 33px;
+  box-shadow: 0px 4px 24px rgba(168, 168, 168, 0.25);
+  border-radius: 9px 9px 0px 0px;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.0625rem;
+  color: #ffffff;
+  font-weight: bold;
+  transition: width 0.23s ease-in 0s;
+}
+.toDoList .menu .menu-list .bnt__days:hover {
+  width: 11.875rem;
+}
+.toDoList .menu .menu-list .btn-monday {
+  background-color: #FFA246;
+}
+.toDoList .menu .menu-list .btn-tuesday {
+  background-color: #35E185;
+}
+.toDoList .menu .menu-list .btn-wednesday {
+  background-color: #6688FF;
+}
+.toDoList .menu .menu-list .btn-thursday {
+  background-color: #B266FF;
+}
+.toDoList .menu .menu-list .btn-friday {
+  background-color: #66D1FF;
+}
+.toDoList .menu .menu-list .btn-saturday {
+  background-color: #FF66D4;
+}
+.toDoList .menu .menu-list .btn-sunday {
+  background-color: #FF6666;
+}
+.toDoList .menu .menu-list .bnt__days-active {
+  width: 11.875rem;
 }/*# sourceMappingURL=style.css.map */

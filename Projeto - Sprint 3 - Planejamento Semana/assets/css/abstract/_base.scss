@@ -1,1 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&family=Poppins:wght@300;600&display=swap');
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../imgs/LogoCompasso.svg);
+    background-repeat: no-repeat;
+    background-position: 64rem 19rem;
+    background-size: 43rem;
+}

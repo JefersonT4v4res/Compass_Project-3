@@ -1,0 +1,67 @@
+@import '../base';
+@import '../mixins';
+@import '../variables';
+
+.toDoList {
+    display: block;
+    .menu {
+        @include flexContainer();
+        justify-content: center;
+        width: calc(100vw - 4rem);
+        margin: 0 auto 5rem;
+        .block__time {
+            @include flexContainer();
+            justify-content: center;
+            position: absolute;
+            left: 2rem;
+            top: 15rem;
+            width: 85px;
+            height: 75px;
+            background-color: $white;
+            box-shadow: 0px 4px 24px rgb(168 168 168 / 25%);
+            border-radius: 10px;
+            @include styleText($Nunito, $Secondary-title, $light-gray);
+        }
+       .menu-list {
+        @include flexContainer();
+        justify-content: space-around;
+        width: calc(100vw - 15rem);
+        .bnt__days {
+            width: 150px;
+            height: 33px;
+            box-shadow: 0px 4px 24px rgb(168 168 168 / 25%);
+            border-radius: 9px 9px 0px 0px;
+            @include styleText($Poppins, $Secondary-title, $white);
+            font-weight: bold;
+            transition: width .23s ease-in 0s;
+            &:hover {
+                width: 11.875rem;
+            }
+        }
+        .btn-monday {
+            background-color: $honey-yellow;
+        }
+        .btn-tuesday {
+            background-color: $light-green;
+        }
+        .btn-wednesday {
+            background-color: $light-blue;
+        }
+        .btn-thursday {
+            background-color: $light-purple;
+        }
+        .btn-friday {
+            background-color: $sky-blue;
+        }
+        .btn-saturday {
+            background-color: $light-pink;
+        }
+        .btn-sunday {
+            background-color: $light-red;
+        }
+        .bnt__days-active {
+            width: 11.875rem;
+        }
+       }
+    }
+}
