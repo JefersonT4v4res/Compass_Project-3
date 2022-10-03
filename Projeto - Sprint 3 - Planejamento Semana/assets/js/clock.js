@@ -3,10 +3,21 @@ function clock() {
     let myTime = setTimeout('currentHour()', refresh);
 }
 
+function addZero(time) {
+    let value;
+    if(time < 10){
+        value = '0' + time;
+        return value;
+    }else {
+        return time;
+    }
+}
+
 function currentHour() {
     const date = new Date();
-    const hours = date.getHours();
-    const minutes = date.getMinutes();
+    let hours = addZero(date.getHours());
+    let minutes = addZero(date.getMinutes());
+    console.log(hours, minutes);
     const hhmmm = [hours, minutes].join(':');
     document.querySelector(".header__hour").innerHTML = hhmmm;
     clock();
