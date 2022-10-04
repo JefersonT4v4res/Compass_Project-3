@@ -173,31 +173,37 @@
             <nav class="menu">
                 <div class="block__time"><span class="time">Horário</span></div>
                 <ul class="menu-list">
-                    <li class="menu-list__days"><button class="bnt__days btn-monday" onclick="addClass(this)">Segunda-Feira</button></li>
-                    <li class="menu-list__days"><button class="bnt__days btn-tuesday" onclick="addClass(this)">Terça-Feira</button></li>
-                    <li class="menu-list__days"><button class="bnt__days btn-wednesday" onclick="addClass(this)">Quarta-Feira</button></li>
-                    <li class="menu-list__days"><button class="bnt__days btn-thursday" onclick="addClass(this)">Quinta-Feira</button></li>
-                    <li class="menu-list__days"><button class="bnt__days btn-friday" onclick="addClass(this)">Sexta-Feira</button></li>
-                    <li class="menu-list__days"><button class="bnt__days btn-saturday" onclick="addClass(this)">Sábado</button></li>
-                    <li class="menu-list__days"><button class="bnt__days btn-sunday" onclick="addClass(this)">Domingo</button></li>
+                    <li class="menu-list__days"><button class="bnt__days btn-monday" id="monday" onclick="addClass(this)">Segunda-Feira</button></li>
+                    <li class="menu-list__days"><button class="bnt__days btn-tuesday" id="tuesday" onclick="addClass(this)">Terça-Feira</button></li>
+                    <li class="menu-list__days"><button class="bnt__days btn-wednesday" id="wednesday" onclick="addClass(this)">Quarta-Feira</button></li>
+                    <li class="menu-list__days"><button class="bnt__days btn-thursday" id="thursday" onclick="addClass(this)">Quinta-Feira</button></li>
+                    <li class="menu-list__days"><button class="bnt__days btn-friday" id="friday" onclick="addClass(this)">Sexta-Feira</button></li>
+                    <li class="menu-list__days"><button class="bnt__days btn-saturday" id="saturday" onclick="addClass(this)">Sábado</button></li>
+                    <li class="menu-list__days"><button class="bnt__days btn-sunday" id="sunday" onclick="addClass(this)">Domingo</button></li>
                 </ul>
             </nav>
-            <div class="toDoList__board">
+            <div class="toDoList__board board-monday">
                 
-               <!-- <div class="toDoList__board-card">
+                <div class="toDoList__board-card">
                     <div class="card__hour">11h00m</div>
                     <div class="card__content">
                         <p class="card__content-activity">Mussum Ipsum, cacilds vidis litro abertis. Mauris nec dolor in eros commodo tempor.</p>
                         <button class="card__content-btn_erase">Apagar</button>
                     </div>
-                </div>-->
+                </div>
                 
-
             </div>
+            <div class="toDoList__board board-tuesday"></div>
+            <div class="toDoList__board board-wednesday"></div>
+            <div class="toDoList__board board-thursday"></div>
+            <div class="toDoList__board board-friday"></div>
+            <div class="toDoList__board board-saturday"></div>
+            <div class="toDoList__board board-sunday"></div>
         </section>
     </main>
 
     <script src="./assets/js/clock.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/addEvent.js"></script>
 </body>
 </html>

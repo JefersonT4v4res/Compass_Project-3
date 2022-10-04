@@ -524,4 +524,22 @@ body {
   font-size: 0.875rem;
   color: #ffffff;
   font-weight: bold;
+}
+.toDoList .board-tuesday {
+  display: none;
+}
+.toDoList .board-wednesday {
+  display: none;
+}
+.toDoList .board-thursday {
+  display: none;
+}
+.toDoList .board-friday {
+  display: none;
+}
+.toDoList .board-saturday {
+  display: none;
+}
+.toDoList .board-sunday {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
