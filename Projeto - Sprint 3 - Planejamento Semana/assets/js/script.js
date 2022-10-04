@@ -1,30 +1,26 @@
-let dropdownD = document.querySelector(".day-week");
-let dropdownH = document.querySelector(".hour");
-let optDay = document.querySelectorAll(".option-day");
-let optHour = document.querySelectorAll(".option-hour");
+let dropD = document.querySelector(".day-week");
+let dropH = document.querySelector(".hour");
 let flag = 0;
 let lastDay;
 
+dropD.addEventListener("click", dropdownD);
 
-dropdownD.addEventListener("click", function(event) {
-    let drop = document.querySelector(".days-options");
-    drop.classList.toggle('active');
-})
+    function dropdownD() {
+        document.querySelector(".days-options").classList.toggle('active');
+    }
+        function getDay(info) {
+            document.querySelector(".chosen-day").innerText = info.innerText;
+        }
 
-dropdownH.addEventListener("click", function(event) { 
-    let drop = document.querySelector(".hours-options");  
-    drop.classList.toggle('active');
-})
+dropH.addEventListener("click", dropdownH)
 
-function getDay(info) {
-    document.querySelector(".chosen-day").innerText = info.innerText;
-    document.querySelector(".days-options").classList.toggle('active');
-}
+    function dropdownH() {
+        document.querySelector(".hours-options").classList.toggle('active');
+    }
+        function getHour(info) {
+            document.querySelector(".input__hour").value = info.innerText;
+        }
 
-function getHour(info) {
-    document.querySelector(".input__hour").value = info.innerText;
-    document.querySelector(".hours-options").classList.toggle('active');
-}
 
 function removeClass(className) {
     flag++;
