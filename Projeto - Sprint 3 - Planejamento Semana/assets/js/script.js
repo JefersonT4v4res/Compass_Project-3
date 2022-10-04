@@ -2,6 +2,7 @@ let dropD = document.querySelector(".day-week");
 let dropH = document.querySelector(".hour");
 let flag = 0;
 let lastDay;
+let lastTab;
 
 dropD.addEventListener("click", dropdownD);
 
@@ -22,19 +23,26 @@ dropH.addEventListener("click", dropdownH)
         }
 
 
-function removeClass(className) {
+function removeClass(className, tab_class) {
     flag++;
     if(flag == 2){
         document.querySelector(lastDay).classList.toggle('bnt__days-active');
+        document.querySelector(lastTab).style.display = "none";
         flag--;
         lastDay = className;
+        lastTab = tab_class;
     }else {
         lastDay = className;
+        lastTab = tab_class;
     }
 }
 
 function addClass(event) {
-     document.querySelector("." + event.classList[1]).classList.toggle('bnt__days-active');
-     let nameClass = ("." + event.classList[1]);
-     removeClass(nameClass);
+    document.querySelector("." + event.classList[1]).classList.toggle('bnt__days-active');
+    let nameClass = ("." + event.classList[1]);
+    let tab = document.querySelector(nameClass);
+    let tab_class = ".board-" + tab.id;
+    document.querySelector(tab_class).style.display = "flex";
+    removeClass(nameClass, tab_class);
+
 }

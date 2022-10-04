@@ -525,6 +525,9 @@ body {
   color: #ffffff;
   font-weight: bold;
 }
+.toDoList .board-monday {
+  display: none;
+}
 .toDoList .board-tuesday {
   display: none;
 }
