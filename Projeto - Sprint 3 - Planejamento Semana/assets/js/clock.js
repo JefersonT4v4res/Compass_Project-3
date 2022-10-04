@@ -17,7 +17,6 @@ function currentHour() {
     const date = new Date();
     let hours = addZero(date.getHours());
     let minutes = addZero(date.getMinutes());
-    console.log(hours, minutes);
     const hhmmm = [hours, minutes].join(':');
     document.querySelector(".header__hour").innerHTML = hhmmm;
     clock();
