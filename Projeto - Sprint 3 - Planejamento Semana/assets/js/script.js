@@ -60,11 +60,11 @@ function addClass(event) {
 //checkActive(event);
         document.querySelector("." + event.classList[1]).classList.toggle('bnt__days-active');
         let nameClass = ("." + event.classList[1]);
-        console.log(nameClass);
+        //console.log(nameClass);
         let tab = document.querySelector(nameClass);
-        console.log(tab);
+        //console.log(tab);
         let tab_class = ".board-" + tab.id;
-        console.log(tab_class);
+        //console.log(tab_class);
         document.querySelector(tab_class).style.display = "flex";
         removeClass(nameClass, tab_class);   
 
